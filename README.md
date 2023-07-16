@@ -12,4 +12,5 @@
 
 #### 传送门
 
-* [ffmpeg-commad](/code/README.md)
+* [音视频批处理](/code/batch_processing)
+* [音视频剪切](/code/cut)
