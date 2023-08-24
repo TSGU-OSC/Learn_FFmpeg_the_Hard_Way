@@ -31,8 +31,8 @@ FFmpeg是一套开源的跨平台音视频处理工具，可以用来录制、�
 
 #### 传送门
 
-* [音视频批处理](/command/batch_processing)
-* [音视频剪切](/command/cut)
+* [命令行](/command/)
+* [代码开发](/code/)
 
 #### 感谢
 
