@@ -1,4 +1,4 @@
-# ffmpeg_commad
+# ffmpeg_learn
 
 #### 介绍
 音视频编解码程序ffmpeg的命令行及开发教程仓库
