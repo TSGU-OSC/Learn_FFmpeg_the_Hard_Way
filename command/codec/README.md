@@ -58,6 +58,11 @@ ffmpeg -decoders
 ffmpeg -i input.avi -r 24 output.mp4
 ```
 * `-r 24` 控制帧速率为24fps
+#### 控制视频分辨率
+
+* `-vf scale=xxx:xxx` 自定义视频分辨率
+
+
 
 #### 复制流
 ```
@@ -69,13 +74,18 @@ ffmpeg -i input.mp4 -c copy out.mp4
  _______              ______________            ________
 |       |            |              |          |        |
 | input |  demuxer   | encoded data |  muxer   | output |
-| file  | ---------&gt; | packets      | -------&gt; | file   |
+| file  | ---------  | packets      | -------  | file   |
 |_______|            |______________|          |________|
 
 
 ```
 #### 选择流
 `ffmpeg` 提供了 `-map` 选项让使用者可以对流进行操作，比如视频流，音频流，字幕流等。同时可以使用`an` `vn` `sn` `dn`选项分别禁用音频流，视频流，字幕流，数据流。
+
+#### 控制编码质量
+* `-crf` 此参数用于控制编码质量，默认`-crf 23`，数值越大，文件体积越小，质量越差，数值越大则相反 
+* `-b `此参数用于控制码率 如`-b:v 3000k`
+* `-preset` 此参数是ffmpeg自带的预设，有slow,high等多个选项  
 
 ### map示例命令
 假设有以下文件
