@@ -5,7 +5,7 @@
  _______              ______________
 |       |            |              |
 | input |  demuxer   | encoded data |   decoder
-| file  | ---------&gt; | packets      | -----+
+| file  | ---------  | packets      | -----+
 |_______|            |______________|      |
                                            v
                                        _________
@@ -15,7 +15,7 @@
                                       |_________|
  ________             ______________       |
 |        |           |              |      |
-| output | &lt;-------- | encoded data | &lt;----+
+| output | --------  | encoded data |  ----+
 | file   |   muxer   | packets      |   encoder
 |________|           |______________|
 
