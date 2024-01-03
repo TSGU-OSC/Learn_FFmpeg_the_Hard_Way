@@ -1,10 +1,10 @@
 # ffmpeg_learn
 
 #### 介绍
-音视频编解码程序ffmpeg的命令行及开发教程仓库
+📢 欢迎来到我们的音视频编解码程序ffmpeg的命令行及开发教程仓库
 
 ### ffmpeg介绍
-FFmpeg是一套开源的跨平台音视频处理工具，可以用来录制、转换和流式传输音视频文件。FFmpeg由C语言编写而成，支持多种操作系统，包括Windows、Linux、macOS等。
+🌟 FFmpeg是一套开源的跨平台音视频处理工具，可以用来录制、转换和流式传输音视频文件。FFmpeg由C语言编写而成，支持多种操作系统，包括Windows、Linux、macOS等。
 
 [ffmpeg官网](https://www.ffmpeg.org/)
 
@@ -28,7 +28,11 @@ FFmpeg是一套开源的跨平台音视频处理工具，可以用来录制、�
 2.  提交代码
 3.  新建 Pull Request
 
+🚀 具体请参考我们的 [贡献指南](./CONTRIBUTING.md)。 
 #### 传送门
+
+##### [开发入门文档](./document/README.md)
+
 
 ##### 编译
 * [编译项目教程](./basement/compile/)
@@ -38,6 +42,6 @@ FFmpeg是一套开源的跨平台音视频处理工具，可以用来录制、�
 
 #### 感谢
 
-衷心感谢 Hakan Soyalp 为ffmpeg开发教学做出的贡献
+😁 衷心感谢 Hakan Soyalp 为ffmpeg开发教学做出的贡献
 * [Youtube主页](https://www.youtube.com/user/nesessoftware)
 * [部分代码示例来源](https://github.com/loupus/ffmpeg_tutorial)
