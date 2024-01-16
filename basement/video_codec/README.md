@@ -3,7 +3,9 @@
 ## MPEG 
 
 `Motion Picture Experts Group (MPEG)` has defined a set of standards for video and audio compression coding and multimedia delivery since the early `1990s`. The compression ratio achieved with MPEG encoding is the ideal standard for digital video data delivery. MPEG standards do not specify the operation of the encoder but allow encoder implementations to improve over time. Hence, various features have been added from one profile to another, aiming to increase its complexity and efficiency.  Here are a few MPEG standards that have allowed enormous innovation while maintaining their interoperable standard. These standards would guide you in selecting the desired video format.
+
 ![Alt text](./img/VCD-1.png.webp)
+
 ### MPEG 1
 
 MPEG started developing coding formats in `1992`. It first defined the MPEG-1 coding format that was commonly applied to `Video-CD` and low-quality video on `DVD Video`. It was also used in digital satellite/ cable TV services before MPEG-2 Codex was introduced.
