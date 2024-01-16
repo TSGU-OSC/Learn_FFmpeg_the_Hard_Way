@@ -1,13 +1,8 @@
-# ffmpeg开发入门教程
-
-#### 开发环境
-MacOS Ventura 13.5 , M1 Pro , FFmpeg 6.0 , Clang++
-
-### 编译
-* [编译项目教程](../basement/compile/)
+# ffmpeg示例代码
 
 #### 传送门
 
-* [视频信息读取](./avformat_context.cpp)
-* [视频编码读取](./avcodec_context.cpp)
-* [视频解码](./decode_into_yuv.cpp)
+* [aac rtsp流实现](./aac_rtsp/)
+* [h264 rtsp流实现](./h264_rtsp_code/)
+* [sdl 实现](./sdl_test/)
+* [MacOS平台示例代码](./mac_code/README.md)
