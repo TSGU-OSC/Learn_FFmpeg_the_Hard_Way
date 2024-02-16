@@ -1,10 +1,10 @@
 /*
  * copyright (c) 2024 Jack Lau
  * 
- * This file is a tutorial about extrating audio stream from a container into a new container through ffmpeg API
+ * This file is a tutorial about extrating video stream from a container into a new container through ffmpeg API
  * 
  * FFmpeg version 5.0.3 
- * Tested on Ubuntu 22.04, compiled with GCC 11.4.0
+ * Tested on MacOS 14.1.2, compiled with clang 14.0.3
  */
 
 #include <libavformat/avformat.h>
@@ -41,8 +41,8 @@ int main(int argc, char *argv[])
         exit(-1);
     }
 
-    //find the audio stream from container
-    if((idx = av_find_best_stream(pFmtCtx, AVMEDIA_TYPE_AUDIO, -1, -1, NULL, 0)) < 0){
+    //find the video stream from container
+    if((idx = av_find_best_stream(pFmtCtx, AVMEDIA_TYPE_VIDEO, -1, -1, NULL, 0)) < 0){
         av_log(pFmtCtx, AV_LOG_ERROR, "There is no audio stream!\n");
         goto end;
     }
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
     outFmt = av_guess_format(NULL, dst, NULL);
     oFmtCtx->oformat = outFmt; 
 
-    //create a audio stream
+    //create a video stream
     outStream = avformat_new_stream(oFmtCtx, NULL);
 
     //set the arguments of output Stream
@@ -82,8 +82,8 @@ int main(int argc, char *argv[])
     while(av_read_frame(pFmtCtx, &pkt) >= 0){
         if(pkt.stream_index == idx ){
             pkt.pts = av_rescale_q_rnd(pkt.pts, inStream->time_base, outStream->time_base, (AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
-            //the dts data is same as the the pts if the file is audio
-            pkt.dts = pkt.pts;
+            //the dts data maybe different with the the pts if the file is video
+            pkt.dts = av_rescale_q_rnd(pkt.dts, inStream->time_base, outStream->time_base, (AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
             pkt.duration = av_rescale_q(pkt.duration, inStream->time_base, outStream->time_base);
             pkt.stream_index = 0;
             pkt.pos = -1;
