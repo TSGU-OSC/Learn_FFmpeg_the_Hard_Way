@@ -2,7 +2,7 @@
 
 #### 传送门
 
-* [常见api使用教程](./tutorial/README.md)
+* [常见api使用和示例程序](./tutorial/README.md)
 * [aac rtsp流实现](./aac_rtsp/)
 * [h264 rtsp流实现](./h264_rtsp_code/)
 * [sdl 实现](./sdl_test/)
