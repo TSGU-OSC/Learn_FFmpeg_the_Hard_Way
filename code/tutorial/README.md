@@ -6,3 +6,4 @@
 - [extract audio](./extract_audio.c)
 - [extract video](./extract_video.c)
 - [remux](./remux.c)
+- [cut](./cut.c)
