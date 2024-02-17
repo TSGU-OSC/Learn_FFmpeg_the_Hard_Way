@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
         AVStream *inStream, *outStream;
         
         inStream = pFmtCtx->streams[pkt.stream_index];
-        if(pkt.stream_index < 0){
+        if(stream_map[stream_index] < 0){
             av_packet_unref(&pkt);
             continue;
         }
