@@ -8,3 +8,4 @@
 - [remux](./remux.c)
 - [cut](./cut.c)
 - [encode_video](./encode_video.c)
+- [decode_video](./decode_video.c)
