@@ -9,3 +9,4 @@
 - [cut](./cut.c)
 - [encode_video](./encode_video.c)
 - [decode_video](./decode_video.c)
+- [encode_audio](./encode_audio.c)
