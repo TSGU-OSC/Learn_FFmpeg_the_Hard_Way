@@ -3,7 +3,7 @@
  * 
  * This file is a tutorial about texture rendering through SDL2 API
  * 
- * FFmpeg version 5.0.3 
+ * SDL2 version 2.30.0 
  * Tested on MacOS 14.1.2, compiled with clang 14.0.3
  */
 #include <SDL.h>
