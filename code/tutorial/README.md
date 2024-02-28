@@ -11,6 +11,7 @@
 - [remux](./remux.c)
 - [cut](./cut.c)
 - [encode_video](./encode_video.c)
+- [encode_audio](./encode_audio.c)
 - [decode_video](./decode_video.c)
 - [transcode](./transcode.c)
 - [avio_read_callback](./avio_read_callback.c)
