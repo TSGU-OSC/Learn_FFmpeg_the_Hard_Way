@@ -6,6 +6,9 @@
 
 1. [FFmpeg 开发环境配置](./ffmpeg_develop/README.md)
 2. [FFmpeg 开发入门](./ffmpeg_code_learn/README.md)
+3. [SDL 开发环境配置](./sdl_configure_develop/README.md)
+4. [FFmpeg 在CentOS中配置开发环境](./ffmpeg_CentOS7_config/README.md)
+5. [FFmpeg 视频滤镜使用](./videoFilter/README.md)
 
 ## 如何使用
 
