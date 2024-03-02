@@ -4,6 +4,8 @@
 
 - [video player](./video_palyer.c)
 
+- [pcm player](./pcm_player.c)
+
 ## ffmpeg simple api
 
 - [deal with files](./file.c)
