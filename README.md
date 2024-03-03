@@ -42,6 +42,7 @@
 
 #### 感谢
 
-😁 衷心感谢 Hakan Soyalp 为ffmpeg开发教学做出的贡献
+😁 衷心感谢 Hakan Soyalp 和 Stephen Dranger 为ffmpeg开发教学做出的贡献
 * [Youtube主页](https://www.youtube.com/user/nesessoftware)
 * [部分代码示例来源](https://github.com/loupus/ffmpeg_tutorial)
+* [部分代码示例来源](https://github.com/mpenkov/ffmpeg-tutorial)
