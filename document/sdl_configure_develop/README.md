@@ -56,13 +56,7 @@ all:link link_bin link_pc link_m4 link_cmake
  
 mk_cmake_dir:
         sudo $(MKDIR) /usr/lib/cmake
-```
 
-
-## 创健软链接
-### 在/usr/include/目录下为SDL2创建头文件目录软链接
-### 在/usr/lib目录下，为SDL2链接库创建软链接
-```
 link:
         @echo ">>>>make links for the files of include && lib. <<<<"
         sudo ln -s $(SRCDIRS)/include/SDL2/ $(DSTDIRS)/include/SDL2
@@ -101,6 +95,7 @@ unlink:
         sudo $(RM) $(DSTDIRS)/lib/cmake/SDL2
 ```
 - 请注意上面的代码文件中的是tab键而不是空格，否则会报错
+- 如果提示链接已经存在，先执行make unlink，然后执行make
 
 
 
