@@ -6,6 +6,8 @@
 
 - [pcm player](./pcm_player.c)
 
+- [transcoding](./transcode_video.c)
+
 ## ffmpeg simple api
 
 - [deal with files](./file.c)
