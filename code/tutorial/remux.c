@@ -127,7 +127,7 @@ end:
         avio_close(oFmtCtx->pb);
     }
     if(oFmtCtx){
-        avformat_close_input(&oFmtCtx);
+        avformat_free_context(oFmtCtx);
         oFmtCtx = NULL;
     }
     if(stream_map){
