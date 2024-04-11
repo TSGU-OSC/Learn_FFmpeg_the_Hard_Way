@@ -22,30 +22,30 @@
     ```make```. 
     ```sudo make install```. 
 
-- 配置开发环境：打开您使用的文本编辑器，创建一个新的文件，例如ffmpeg-dev.sh，并将以下内容添加到文件中
-    ```export LD_LIBRARY_PATH=/usr/local/lib```
-    ```export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig```
+- 配置开发环境：打开您使用的文本编辑器，创建一个新的文件，例如ffmpeg-dev.sh，并将以下内容添加到文件中. 
+    ```export LD_LIBRARY_PATH=/usr/local/lib```. 
+    ```export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig```. 
 
     - 然后执行
     ```source ffmpeg-dev.sh```
     - 没有反馈则说明成功
 
 - 配置动态库路径：
-    - 将FFmpeg的动态库路径/usr/local/lib添加到/etc/ld.so.conf文件中
-        ```sudo echo "/usr/local/lib" >> /etc/ld.so.conf```  
-        ```sudo ldconfig```
+    - 将FFmpeg的动态库路径/usr/local/lib添加到/etc/ld.so.conf文件中. 
+        ```sudo echo "/usr/local/lib" >> /etc/ld.so.conf```.     
+        ```sudo ldconfig```. 
 
 - 测试是否配置成功
-    ```echo $LD_LIBRARY_PATH```  
-    ```echo $PKG_CONFIG_PATH```
-    - 如果输出了显示正确的路径，则说明环境变量已正确设置
+    ```echo $LD_LIBRARY_PATH```.   
+    ```echo $PKG_CONFIG_PATH```. 
+    - 如果输出了显示正确的路径，则说明环境变量已正确设置 
     - 使用以下命令：检测按照和配置
-    ```pkg-config --modversion libavcodec```
+    ```pkg-config --modversion libavcodec```. 
     - 如果输出显示了正确的版本号。说明ffmpeg库的安装和配置是成功的
 
 - 彻底删除ffmpeg
-    ```sudo yum remove ffmpeg```  
-    ```sudo yum autoremove```  
-    ```rm -rf ~/.ffmpeg```  
-    ```sudo rm -rf /usr/local/include/ffmpeg```  
-    ```sudo rm -rf /usr/local/lib/libav*```  
+    ```sudo yum remove ffmpeg```.   
+    ```sudo yum autoremove```.   
+    ```rm -rf ~/.ffmpeg```.   
+    ```sudo rm -rf /usr/local/include/ffmpeg```.   
+    ```sudo rm -rf /usr/local/lib/libav*```.   
