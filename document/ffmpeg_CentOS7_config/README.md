@@ -16,9 +16,11 @@
     ```cd ffmpeg-4.0```
 
 - 编译和安装FFmpeg：进入FFmpeg源代码目录，并执行以下命令来编译和安装FFmpeg
-    ```./configure --enable-shared```  
-    ```make```  
-    ```sudo make install```
+    ```./configure --enable-shared```.   
+    ```如果依赖h264的话用下面这条命令，前提安装有h264```.   
+    ```./configure --enable-gpl --enable-libx264 --enable-shared --extra-ldflags=-L/usr/local/lib --extra-cflags=-I/usr/local/include```. 
+    ```make```. 
+    ```sudo make install```. 
 
 - 配置开发环境：打开您使用的文本编辑器，创建一个新的文件，例如ffmpeg-dev.sh，并将以下内容添加到文件中
     ```export LD_LIBRARY_PATH=/usr/local/lib```
