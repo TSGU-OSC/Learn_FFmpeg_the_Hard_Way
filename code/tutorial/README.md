@@ -2,11 +2,11 @@
 
 ## example program
 
-- [video player](./video_palyer.c)
+- [video player](./video_player.c)
 
 - [pcm player](./pcm_player.c)
 
-- [transcoding](./transcode_video.c)
+- [transcoding and remux](./transcode_remux.c)
 
 ## ffmpeg simple api
 
@@ -21,10 +21,10 @@
 - [encode_video](./encode_video.c)
 - [encode_audio](./encode_audio.c)
 - [decode_video](./decode_video.c)
+- [transcode_video](./transcode_video.c)
 - [transcode](./transcode.c)
 - [avio_read_callback](./avio_read_callback.c)
 
-- [encode_audio](./encode_audio.c)
 ## sdl simple api
 
 - [sdl_event](./sdl_event.c)

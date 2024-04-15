@@ -3,7 +3,7 @@
 > This title is inspired by Leandro Moreira's tutorial, particularly echoing the approach of 'Learn FFmpeg libav the Hard Way.'
 
 #### 介绍
-📢 欢迎来到我们的音视频编解码程序ffmpeg的命令行及开发教程仓库
+📢 欢迎来到我们的音视频编解码程序FFmpeg的命令行及开发教程仓库
 
 ### ffmpeg介绍
 🌟 FFmpeg是一套开源的跨平台音视频处理工具，可以用来录制、转换和流式传输音视频文件。FFmpeg由C语言编写而成，支持多种操作系统，包括Windows、Linux、macOS等。
