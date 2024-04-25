@@ -11,3 +11,5 @@
 - [视频编码](./video_codec/README.md)
 
 - [YUV格式和PGM格式](./YUV_and_PGM/README.md)
+
+- [stream流的常见参数](./stream_parameters/README.md)

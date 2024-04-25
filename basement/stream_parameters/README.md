@@ -2,7 +2,7 @@ We'll talk about some parameters of video or audio streams
 
 ### Learn timestample the hard way
 
-> This title is inspired by Leandro Moreira's tutorial, particularly echoing the approach of 'Learn FFmpeg libav the Hard Way.
+> This title is inspired by Leandro Moreira's tutorial, particularly echoing the approach of Learn FFmpeg libav the Hard Way.
 
 #### What is pts and dts 
 

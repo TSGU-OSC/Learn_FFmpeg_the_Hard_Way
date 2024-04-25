@@ -1,6 +1,6 @@
 # Learn FFmpeg the Hard Way
 
-> This title is inspired by Leandro Moreira's tutorial, particularly echoing the approach of 'Learn FFmpeg libav the Hard Way.'
+> This title is inspired by Leandro Moreira's tutorial, particularly echoing the approach of Learn FFmpeg libav the Hard Way.
 
 #### 介绍
 📢 欢迎来到我们的音视频编解码程序FFmpeg的命令行及开发教程仓库
@@ -33,8 +33,13 @@
 🚀 具体请参考我们的 [贡献指南](./CONTRIBUTING.md)。 
 #### 传送门
 
-##### [开发入门文档](./document/README.md)
+##### [基础知识](./basement/README.md)
 
+##### [代码示例](./code/README.md)
+
+##### [命令行使用](./command/README.md)
+
+##### [开发文档](./document/README.md)
 
 ##### 编译
 * [编译项目教程](./basement/compile/)
@@ -44,7 +49,9 @@
 
 #### 感谢
 
-😁 衷心感谢 Hakan Soyalp 和 Stephen Dranger 为ffmpeg开发教学做出的贡献
+😁 衷心感谢 Hakan Soyalp, Stephen Dranger, 
+leandromoreira 为ffmpeg开发教学做出的贡献
 * [Youtube主页](https://www.youtube.com/user/nesessoftware)
 * [部分代码示例来源](https://github.com/loupus/ffmpeg_tutorial)
 * [部分代码示例来源](https://github.com/mpenkov/ffmpeg-tutorial)
+* [部分代码示例来源](https://github.com/leandromoreira/ffmpeg-libav-tutorial)
