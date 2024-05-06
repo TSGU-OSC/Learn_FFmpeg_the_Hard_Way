@@ -18,6 +18,7 @@
 - [mux](./mux.c)
 - [remux](./remux.c)
 - [cut](./cut.c)
+- [filtering_video](./filtering_video.c)
 - [encode_video](./encode_video.c)
 - [encode_audio](./encode_audio.c)
 - [decode_video](./decode_video.c)
