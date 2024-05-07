@@ -3,10 +3,12 @@
  * 
  * This file is a tutorial about palying(decoding and rendering) video through ffmpeg and SDL API 
  * 
- * FFmpeg version 5.0.3 
- * SDL2 version 2.30.0
+ * FFmpeg version 6.0.1
+ * SDL2 version 2.30.3
+ *
  * Tested on MacOS 14.1.2, compiled with clang 14.0.3
  */
+
 #include <SDL.h>
 #include <libavformat/avformat.h>
 #include <libavutil/avutil.h>
@@ -18,13 +20,14 @@ typedef struct VideoState{
     AVCodecContext *avctx;
     AVPacket       *pkt;
     AVFrame        *frame;
+    AVStream       *stream;
 
     SDL_Texture    *texture;
 }VideoState;
 
 
-static int w_width = 640;
-static int w_height = 480;
+static int w_width = 1620;
+static int w_height = 1080;
 
 static SDL_Window *win = NULL;
 static SDL_Renderer *renderer = NULL;
@@ -40,9 +43,10 @@ static void render(VideoState *is)
     SDL_RenderClear(renderer);
     SDL_RenderCopy(renderer, is->texture, NULL, NULL);
     SDL_RenderPresent(renderer);
-    int frameRate = is->avctx->framerate.num;
+    int frameRate = is->stream->r_frame_rate.num/is->stream->r_frame_rate.den;
     if(frameRate <= 0){
         av_log(NULL, AV_LOG_ERROR,  "Failed to get framerate!\n");
+        SDL_Delay(33);
         return;
     }
     SDL_Delay((Uint32)(ONESECOND/frameRate));
@@ -77,6 +81,11 @@ static int decode(VideoState *is)
 
 end:
     return ret;
+}
+
+static int open_media()
+{
+
 }
 
 int main(int argc, char *argv[])
@@ -158,6 +167,8 @@ int main(int argc, char *argv[])
         av_log(NULL, AV_LOG_ERROR, "Couldn't find codec: libx264 \n");
         goto end;
     }
+    is->stream = inStream;
+
     //init decoder context
     ctx = avcodec_alloc_context3(decodec);
     if(!ctx){

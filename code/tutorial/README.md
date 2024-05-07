@@ -4,6 +4,8 @@
 
 - [video player](./video_player.c)
 
+- [simple player(support video and audio)](./simple_player.c)
+
 - [pcm player](./pcm_player.c)
 
 - [transcoding and remux](./transcode_remux.c)
