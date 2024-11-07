@@ -1,3 +1,39 @@
+## x264安装
+
+- 源码编译 
+```
+    git clone https://code.videolan.org/videolan/x264.git
+    cd x264
+    ./configure --prefix=/usr/x264/ --includedir=/usr/local/include --libdir=/usr/local/lib --enable-shared
+    make 
+    make install
+
+```
+
+- 配置变量
+```
+    vim ~/.bashrc
+
+    在文件最后面添加环境变量:
+    export PATH="/usr/local/nasm/bin:$PATH"
+    export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+
+    设置生效；
+    source ~/.bashrc
+```
+
+- 验证安装
+```
+    richard@richard-MS-7A54:$ pkg-config --libs x264
+    -L/usr/local/lib -lx264
+
+    whereis libx264
+
+    richard@richard-MS-7A54:~$ ls /usr/local/include/
+    libavcodec  libavdevice  libavfilter  libavformat  libavutil  libpostproc  libswresample  libswscale  opencv4  SDL2  x264_config.h  x264.h
+```
+
+
 ## 安装开发工具和依赖项：打开终端，并使用以下命令安装必要的开发工具和依赖项:
 
 - 在CentOS7中配置ffmpeg环境
@@ -8,10 +44,12 @@ centos:
     ```sudo yum groupinstall "Development Tools"```  
     ```sudo yum install git yasm cmake libtool```  
 ubuntu:  
-    ```sudo apt-get install nasm```  
-    ```sudo apt-get update```  
-    ```sudo apt-get install build-essential```  
-    ```sudo apt-get install git yasm cmake libtool```
+    ```
+    sudo apt-get install nasm
+    sudo apt-get update 
+    sudo apt-get install build-essential
+    sudo apt-get install git yasm cmake libtool
+    ```
 
 - 安装其他依赖项：FFmpeg还依赖于其他一些库和软件包  
 centos:  
@@ -20,37 +58,32 @@ ubuntu:
     ```sudo apt-get install zlib1g-dev libbz2-dev libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev tk-dev libgdbm-dev libdb-dev libpcap-dev liblzma-dev libexpat1-dev```
 
 - 下载FFmpeg源代码：进入您要存储FFmpeg源代码的目录，并使用以下命令克隆FFmpeg的Git仓库  
-    ```wget https://ffmpeg.org/releases/ffmpeg-4.0.tar.gz```  
-    ```tar -xf ffmpeg-4.0.tar.gz```  
-    ```cd ffmpeg-4.0```
+    ```
+    git clone https://github.com/FFmpeg/FFmpeg.git
+    cd FFmpeg
+    git checkout n5.1.4
+    ./configure --enable-gpl --enable-libx264 --enable-sdl --enable-shared
+    make -j8
+    sudo make install
+    ```
 
-- 编译和安装FFmpeg：进入FFmpeg源代码目录，并执行以下命令来编译和安装FFmpeg
-    ```./configure --enable-shared```.   
-    如果依赖h264的话用下面这条命令，前提安装有h264  
-    ```./configure --enable-gpl --enable-libx264 --enable-shared --extra-ldflags=-L/usr/local/lib --extra-cflags=-I/usr/local/include```.  
-    ```make```.   
-    ```sudo make install```. 
 
-- 配置开发环境：打开您使用的文本编辑器，创建一个新的文件，例如ffmpeg-dev.sh，并将以下内容添加到文件中.   
-    ```export LD_LIBRARY_PATH=/usr/local/lib```. 
-    ```export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig```. 
-
-    - 然后执行  
-    ```source ffmpeg-dev.sh```
-    - 没有反馈则说明成功
-
-- 配置动态库路径：  
-    - 将FFmpeg的动态库路径/usr/local/lib添加到/etc/ld.so.conf文件中. 
-        ```sudo echo "/usr/local/lib" >> /etc/ld.so.conf```.     
-        ```sudo ldconfig```. 
-
-- 测试是否配置成功  
-    ```echo $LD_LIBRARY_PATH```.   
-    ```echo $PKG_CONFIG_PATH```. 
-    - 如果输出了显示正确的路径，则说明环境变量已正确设置 
-    - 使用以下命令：检测按照和配置  
-    ```pkg-config --modversion libavcodec```. 
-    - 如果输出显示了正确的版本号。说明ffmpeg库的安装和配置是成功的
+- 测试是否配置成功
+```
+    安装成功
+    richard@richard-MS-7A54:$ ffmpeg -version
+    ffmpeg version n5.1.4 Copyright (c) 2000-2023 the FFmpeg developers
+    built with gcc 11 (Ubuntu 11.4.0-1ubuntu1~22.04)
+    configuration: --enable-gpl --enable-libx264 --enable-sdl --enable-shared
+    libavutil      57. 28.100 / 57. 28.100
+    libavcodec     59. 37.100 / 59. 37.100
+    libavformat    59. 27.100 / 59. 27.100
+    libavdevice    59.  7.100 / 59.  7.100
+    libavfilter     8. 44.100 /  8. 44.100
+    libswscale      6.  7.100 /  6.  7.100
+    libswresample   4.  7.100 /  4.  7.100
+    libpostproc    56.  6.100 / 56.  6.100
+```
 
 - 如果遇到编译失败，可能需要指定头文件和库路径，请添加该编译参数  
     ```-I/usr/local/include -L/usr/local/lib```  
