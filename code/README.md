@@ -1,6 +1,6 @@
-# ffmpeg示例代码
+# How to use api of FFmpeg and SDL?
 
-#### 传送门
+#### Quick Link
 
 - [demo program](./demo)
 - [simple api usage](./tutorial)
