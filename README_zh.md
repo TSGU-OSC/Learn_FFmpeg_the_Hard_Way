@@ -1,6 +1,6 @@
 # Learn FFmpeg the Hard Way
 
-> This title is inspired by Leandro Moreira's tutorial, particularly echoing the approach of Learn FFmpeg libav the Hard Way.
+> This title is inspired by Leandro Moreira's tutorial, particularly echoing the approach of [Learn FFmpeg libav the Hard Way](https://github.com/leandromoreira/ffmpeg-libav-tutorial).
 
 #### 介绍
 📢 欢迎来到我们的音视频编解码程序FFmpeg的命令行及开发教程仓库
