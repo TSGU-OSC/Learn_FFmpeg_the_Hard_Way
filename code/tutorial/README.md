@@ -1,19 +1,8 @@
-# tutorial
+## ffmpeg simple api tutorial
 
-## example program
-
-- [video player](./video_player.c)
-
-- [simple player(support video and audio)](./simple_player.c)
-
-- [simple player2(support multithread)](./simple_player2.c)
-
-- [pcm player](./pcm_player.c)
-
-- [transcoding and remux](./transcode_remux.c)
-
-## ffmpeg simple api
-
+- [video info catch](./avformat_context.cpp)
+- [video codec catch](./avcodec_context.cpp)
+- [video decode and save frame](./decode_into_yuv.cpp)
 - [deal with files](./file.c)
 - [list files](./list.c)
 - [log system in ffmpeg](./log.c)
@@ -30,8 +19,4 @@
 - [transcode](./transcode.c)
 - [avio_read_callback](./avio_read_callback.c)
 
-## sdl simple api
-
-- [sdl_event](./sdl_event.c)
-- [sdl_texture](./sdl_texture.c)
 
