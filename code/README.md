@@ -3,7 +3,8 @@
 #### Quick Link
 
 - [demo program](./demo)
-- [simple api usage](./tutorial)
+- [ffmpeg simple api usage](./tutorial)
+- [sdl simple api usage](./sdl)
 - [aac rtsp](./aac_rtsp/)
 - [h264 rtsp](./h264_rtsp_code/)
 
