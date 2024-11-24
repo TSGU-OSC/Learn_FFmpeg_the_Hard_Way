@@ -1,5 +1,6 @@
-# ffmpeg 常用命令
-批处理（e.g. 同一文件夹下视频转音频 操作环境 zsh on Unix）
+# ffmpeg common commands
+
+Batch processing (e.g. Video to audio operating environment in the same folder zsh on Unix)
 
 ```
 for f in *.mp4; do
