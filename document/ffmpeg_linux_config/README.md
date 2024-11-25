@@ -1,49 +1,14 @@
-## x264安装
+# Configure the FFmpeg environment in CentOS 7/8/9 and Ubuntu 22.04
 
-- 源码编译 
-```
-    git clone https://code.videolan.org/videolan/x264.git
-    cd x264
-    ./configure --prefix=/usr/x264/ --includedir=/usr/local/include --libdir=/usr/local/lib --enable-shared
-    make 
-    make install
+- Install the tools required for compiling FFmpeg
 
-```
-
-- 配置变量
-```
-    vim ~/.bashrc
-
-    在文件最后面添加环境变量:
-    export PATH="/usr/local/nasm/bin:$PATH"
-    export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
-
-    设置生效；
-    source ~/.bashrc
-```
-
-- 验证安装
-```
-    richard@richard-MS-7A54:$ pkg-config --libs x264
-    -L/usr/local/lib -lx264
-
-    whereis libx264
-
-    richard@richard-MS-7A54:~$ ls /usr/local/include/
-    libavcodec  libavdevice  libavfilter  libavformat  libavutil  libpostproc  libswresample  libswscale  opencv4  SDL2  x264_config.h  x264.h
-```
-
-
-## 安装开发工具和依赖项：打开终端，并使用以下命令安装必要的开发工具和依赖项:
-
-- 在CentOS7中配置ffmpeg环境
-- 安装编译FFmpeg时所需的工具  
-centos:  
+- For CentOS: 
     ```sudo yum install nasm```  
     ```sudo yum update```  
     ```sudo yum groupinstall "Development Tools"```  
     ```sudo yum install git yasm cmake libtool```  
-ubuntu:  
+
+- For Ubuntu:  
     ```
     sudo apt-get install nasm
     sudo apt-get update 
@@ -51,13 +16,14 @@ ubuntu:
     sudo apt-get install git yasm cmake libtool
     ```
 
-- 安装其他依赖项：FFmpeg还依赖于其他一些库和软件包  
-centos:  
+- Install other dependencies: FFmpeg also depends on several other libraries and packages. 
+
+- CentOS:  
     ```sudo yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel expat-devel```  
-ubuntu:  
+- Ubuntu:  
     ```sudo apt-get install zlib1g-dev libbz2-dev libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev tk-dev libgdbm-dev libdb-dev libpcap-dev liblzma-dev libexpat1-dev```
 
-- 下载FFmpeg源代码：进入您要存储FFmpeg源代码的目录，并使用以下命令克隆FFmpeg的Git仓库  
+- Download FFmpeg Source Code: Navigate to the directory where you want to store the FFmpeg source code and use the following command to clone the FFmpeg Git repository: 
     ```
     git clone https://github.com/FFmpeg/FFmpeg.git
     cd FFmpeg
@@ -67,10 +33,8 @@ ubuntu:
     sudo make install
     ```
 
-
-- 测试是否配置成功
+- Test for Successful Configuration:
 ```
-    安装成功
     richard@richard-MS-7A54:$ ffmpeg -version
     ffmpeg version n5.1.4 Copyright (c) 2000-2023 the FFmpeg developers
     built with gcc 11 (Ubuntu 11.4.0-1ubuntu1~22.04)
@@ -84,12 +48,16 @@ ubuntu:
     libswresample   4.  7.100 /  4.  7.100
     libpostproc    56.  6.100 / 56.  6.100
 ```
+- The above information indicates that FFmpeg has been successfully installed.
 
-- 如果遇到编译失败，可能需要指定头文件和库路径，请添加该编译参数  
-    ```-I/usr/local/include -L/usr/local/lib```  
+- If you encounter compilation failures, you may need to specify the header file and library paths; please add the following compile parameters:
+
+```
+    -I/usr/local/include -L/usr/local/lib
+```  
 
 
-- 彻底删除ffmpeg  
+- Completely remove FFmpeg:
     ```sudo yum remove ffmpeg```.   
     ```sudo yum autoremove```.   
     ```rm -rf ~/.ffmpeg```.   
