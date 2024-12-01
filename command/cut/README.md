@@ -5,21 +5,19 @@
 ffmpeg -i input.mp3 -ss 00:00:00 -to 00:00:30 -c copy output.mp3
 ```
 
-This will take an input audio file called input.mp3, trim it to only 30 seconds long, starting from the beginning, and save it to output.mp3.
+这将采用一个名为 input. mp3 的输入音频文件，将其修剪为仅 30 秒长，从头开始，然后将其保存到 out.mp3。
 
-The key options are:
+* `-ss 00:00:00` -  寻找本案开始的开始时间
+* `-to 00:00:30` - 将持续时间或结束时间设置为 30 秒
+* `-c copy` - 无需重新编码的流复制，用于更快的处理
+您可以根据需要调整开始和持续时间。其他一些有用的变化
 
-* `-ss 00:00:00` - Seek to the start time, in this case the beginning
-* `-to 00:00:30` - Set the duration or end time to 30 seconds
-* `-c copy` - Stream copy without re-encoding, for faster processing
-You can adjust the start and duration times as needed. Some other useful variations:
-
-Trim from 30 seconds to 1 minute:
+从30秒开始剪切一分钟
 ```
 -ss 00:00:30 -to 00:01:00
 ```
 
-Trim the last 30 seconds:
+修剪最后 30 秒：
 ```
 -ss -00:00:30
 ```
