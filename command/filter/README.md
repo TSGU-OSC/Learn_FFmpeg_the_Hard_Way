@@ -1,15 +1,15 @@
-# filter滤镜的使用
+# Use of the Filter
 
-### 生成二维码
+### Generate a two - dimensional code
 
-以生成ffmpeg官网为例
+ Take generating the official website of ffmpeg as an example
 ```bash
 ffmpeg -f lavfi -i nullsrc=s=100x100,coreimage=filter=CIQRCodeGenerator@inputMessage=https\\\\\://FFmpeg.org/@inputCorrectionLevel=H -frames:v 1 QRCode.png
 ```
 
-### 视频拼接
+### Video splicing
 
-两个横屏视频拼接为一个 width求和 height要求一致
+Stitch two horizontal videos into one, with the sum of their widths and the same height
 ```bash
 ffmpeg -i video1.mp4 -i video2_scaled.mp4 -filter_complex "hstack" output.mp4
 ```
