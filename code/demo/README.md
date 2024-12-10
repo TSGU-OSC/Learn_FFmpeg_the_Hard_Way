@@ -9,3 +9,5 @@
 - [pcm player](./pcm_player.c)
 
 - [transcoding and remux](./transcode_remux.c)
+
+> if you want to learn more about ffmpeg player, you can find more details in this [[Player Project]](https://github.com/JackLau1222/Simple-AV-Synchronization-Player)
