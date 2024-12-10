@@ -1,8 +1,8 @@
 # Use of the Filter
 
-### Generate a two - dimensional code
+### Generate a QR code
 
- Take generating the official website of ffmpeg as an example
+ Example:generating the QR code of FFmpeg official website
 ```bash
 ffmpeg -f lavfi -i nullsrc=s=100x100,coreimage=filter=CIQRCodeGenerator@inputMessage=https\\\\\://FFmpeg.org/@inputCorrectionLevel=H -frames:v 1 QRCode.png
 ```
