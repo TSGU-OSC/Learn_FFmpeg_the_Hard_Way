@@ -23,3 +23,6 @@ Trim the last 30 seconds:
 ```
 -ss -00:00:30
 ```
+
+> The command -c copy, which tells FFmpeg to copy the audio and video streams without re-encoding them. Since the -ss option (start time) is applied before decoding, it may cause a mismatch between the keyframes, leading to the video being absent in the output. So you can re-encoding this trim output video if you meet this problem.
+> ``ffmpeg -i input.mp3 -ss 00:00:00 -to 00:00:30 -c:v libx264 -c:a aac output.mp3``
